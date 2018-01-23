@@ -74,6 +74,13 @@ const option = {
         historyApiFallback: true,
         noInfo: true,
         hot: false,
+        proxy: {
+            '/aweme/*': {
+                target: 'http://aweme.snssdk.com',
+                secure: false,
+                changeOrigin: true
+            }
+        },
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
